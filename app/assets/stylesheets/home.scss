@@ -11,6 +11,10 @@
   overflow: hidden;
 }
 $blue: #3496db;
+@mixin font($font-size: 15px, $color: #fff) {
+  font-size: $font-size;
+  color: $color;
+}
 section.header-sect {
   background-color: $blue;
   height: 50px;
@@ -31,5 +35,16 @@ section.header-sect {
     &:hover {
       color: #fafafa;
     }
+    &.create-blog {
+      float: left;
+    }
+  }
+}
+section.main-content-sect {
+  h1 {
+    @include font(30px, #575757);
+    text-align: center;
+    line-height: 1;
+    margin: 20px auto
   }
 }

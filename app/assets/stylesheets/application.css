@@ -13,5 +13,6 @@
  *= require bootstrap-responsive.min.css
  *= require bootstrap.min.css
  *= require home.scss
+ *= require blogs.scss
  *= require_self
  */

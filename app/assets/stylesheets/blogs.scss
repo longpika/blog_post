@@ -1,0 +1,57 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$blue: #3496db;
+@mixin font($font-size: 15px, $color: #fff) {
+  font-size: $font-size;
+  color: $color;
+}
+ul.blog-style {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  li {
+    margin: 0px auto 15px;
+    span.title-blog {
+      width: 50%;
+      display: block;
+      float: left;
+    }
+    a.btn {
+      width: 20%;
+      float: right;
+      margin-left: 5%;
+      display: block;
+      &.rc-blog {
+        width: 30%;
+      }
+    }
+    input, textarea {
+      width: 100%;
+      display: block;
+      min-height: 35px;
+    }
+    .pagination {
+      display: block;
+      width: auto;
+      span {
+        width: 30px;
+        display: block;
+        float: left;
+        height: 30px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        overflow: hidden;
+        line-height: 30px;
+        margin-right: 5px;
+        text-align: center;
+        a {
+          border: none;
+          padding: 0px;
+          width: 100%;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}

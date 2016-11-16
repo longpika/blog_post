@@ -1,0 +1,14 @@
+<ul class="clearfix unstyled blog-style">
+  <h1>My blog</h1>
+<% @blogs.each do |f| %>
+  <li class="clearfix">
+    <span class="title-blog"><%= f.title %></span>
+    <a href="#" class="btn btn-danger del-blog-btn clearfix" id="<%= f.id %>">Delete</a>
+    <a href="#" class="btn btn-info edit-blog-btn clearfix" id="<%= f.id %>">Edit</a>
+  </li>
+<% end %>
+<li class="clearfix">
+  <%= raw paginate @blogs %>
+</li>
+<a href="/" class="clearfix btn btn-primary">Back to home page</a>
+</ul>

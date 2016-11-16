@@ -1,0 +1,16 @@
+<ul class="clearfix unstyled blog-style">
+  <h1>Create Blog</h1>
+  <%= form_for @blog, url: @blosg_url do |f| %>
+    <li class="clearfix">
+      <dl><%= f.label :title %></dl>
+      <%= f.text_field :title, class: "clearfix" %>
+    </li>
+    <li class="clearfix">
+      <dl><%= f.label :content %></dl>
+      <%= f.text_area :content, class: "clearfix" %>
+    </li>
+    <li class="clearfix">
+      <%= f.submit "POST", class: "clearfix btn btn-info" %>
+    </li>
+  <% end %>
+</ul>
