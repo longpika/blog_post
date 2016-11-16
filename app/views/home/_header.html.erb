@@ -1,0 +1,8 @@
+<section class="header-sect clearfix">
+  <div class="account-info clearfix">
+    <% if current_account %>
+      <%= link_to('Log out', destroy_account_session_path, :method => :delete, :class => "clearfix") %>
+    <% end %>
+    <span class="account-email clearfix"><%= "Welcome "+current_account.email if current_account %></span>
+  </div>
+</section>

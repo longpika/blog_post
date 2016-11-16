@@ -1,0 +1,35 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  margin: 0;
+  padding: 0;
+}
+.clearfix {
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+$blue: #3496db;
+section.header-sect {
+  background-color: $blue;
+  height: 50px;
+  display: block;
+  line-height: 50px;
+  width: 100%;
+  padding: 0px 15px;
+  span {
+    text-align: right;
+    margin-right: 20px;
+    color: #fff;
+    float:  right;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    float: right;
+    &:hover {
+      color: #fafafa;
+    }
+  }
+}
