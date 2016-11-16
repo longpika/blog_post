@@ -26,6 +26,7 @@ gem 'mysql2', '~> 0.4.2'
 gem 'sidekiq'
 gem 'devise'
 gem 'kaminari'
+gem 'activeadmin', '~> 1.0.0.pre4'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
