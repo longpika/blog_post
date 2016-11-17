@@ -1,16 +1,33 @@
 <div class="home clearfix">
   <h1>Home</h1>
   <div class="clearfix recent-blogs">
-    <ul class="clearfix unstyled blog-style">
-      <li class="clearfix">
-        <h2>Recent Blogs</h2>
-      </li>
-      <% @blogs.each do |f| %>
+    <div class="clearfix left-side box-content">
+      <ul class="clearfix unstyled blog-style">
         <li class="clearfix">
-          <span class="title-blog clearfix"><%= f.title %></span>
-          <a href="#" class="btn btn-success comment-blog-btn clearfix rc-blog" id="<%= f.id %>">Comment</a>
+          <h2>Recent Blogs</h2>
         </li>
-      <% end %>
-    </ul>
+        <% @blogs.each do |f| %>
+          <li class="clearfix">
+            <span class="title-blog clearfix"><%= f.title %></span>
+            <a href="#" class="btn btn-success comment-blog-btn clearfix rc-blog" id="<%= f.id %>">Comment</a>
+            <div class="show-cm-place"></div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="clearfix right-side box-content">
+      <ul class="clearfix unstyled blog-style">
+        <li class="clearfix">
+          <h2>Most Commented Blogs</h2>
+        </li>
+        <% @most_commented_blogs.each do |f| %>
+          <li class="clearfix">
+            <span class="title-blog clearfix"><%= f.title %></span>
+            <a href="#" class="btn btn-success comment-blog-btn clearfix rc-blog" id="<%= f.id %>">Comment</a>
+            <div class="show-cm-place"></div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

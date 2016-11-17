@@ -47,4 +47,25 @@ section.main-content-sect {
     line-height: 1;
     margin: 20px auto
   }
+  .home {
+    width: calc(80vw);
+    margin: 0px auto 100px;
+    height: 100%;
+    display: block;
+    .box-content {
+      width: auto;
+      width: calc(50% - 60px);
+      display: block;
+      border: 1px solid $blue;
+      border-radius: 5px;
+      &.left-side {
+        margin-right: 30px;
+        float: left;
+      }
+      &.right-side {
+        margin-left: 30px;
+        float: right;
+      }
+    }
+  }
 }

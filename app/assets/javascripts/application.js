@@ -29,4 +29,36 @@ $(document).ready(function() {
       }
     })
   });
+  $(document).delegate(".comment-blog-btn", "click", function(e) {
+    e.preventDefault();
+    var dom = $(e.currentTarget);
+    var id = dom.attr("id");
+    $.ajax({
+      url: "/comments/new",
+      type: "GET",
+      success: function(respon) {
+        dom.closest("li").find(".show-cm-place").html(respon)
+      }
+    })
+  });
+  $(document).delegate("#new_comment .btn-cmt", "click", function(e) {
+    e.preventDefault();
+    var dom = $(e.currentTarget);
+    var id = dom.closest("li").find("a").attr("id");
+    var content = dom.closest("li").find("#comment_content").val();
+    $.ajax({
+      url: "/comments",
+      type: "POST",
+      data: {
+        id: id,
+        content: content
+      },
+      success: function(respon) {
+        if (respon.stt == "Success") {
+          alert("Comment Successful");
+          window.location.href = "/";
+        }
+      }
+    })
+  })
 });

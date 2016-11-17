@@ -9,8 +9,8 @@ class BlogsController < ApplicationController
   end
   def create
     if current_account
-      @blog = current_account.blogs.new(blog_params)
-      if @blog.save
+      @blog = current_account.blogs.create(blog_params)
+      if @blog
         redirect_to "/blogs"
       else
         render :new

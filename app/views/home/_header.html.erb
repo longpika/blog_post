@@ -2,7 +2,10 @@
   <div class="account-info clearfix">
     <% if current_account %>
       <a href="/blogs/new" class="clearfix create-blog">Create Blog</a>
+      <span style="float: left; padding: 0px 10px">|</span>
+      <a href="/blogs" class="clearfix" style="float: left">My blogs</a>
       <%= link_to('Log out', destroy_account_session_path, :method => :delete, :class => "clearfix") %>
+      <span>|</span>
     <% end %>
     <span class="account-email clearfix"><%= "Welcome "+current_account.email if current_account %></span>
   </div>

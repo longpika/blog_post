@@ -1,7 +1,7 @@
 class Accounts::RegistrationsController < Devise::RegistrationsController
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
-
+  layout "home"
   def new
     @account = Account.new
   end
@@ -9,8 +9,9 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
   def create
     account = Account.find_by_email(params[:account][:email])
     if !account
-      @account = Account.build(account_params)
+      @account = Account.create(account_params)
       if @account
+        sign_in @account
         redirect_to "/"
       else
         render :json => "Your account can not be created for now!"

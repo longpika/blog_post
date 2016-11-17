@@ -1,0 +1,4 @@
+<%= form_for @comment, url: "/comments", method: "post" do |f| %>
+  <%= f.text_field :content, class: "clearfix" %>
+  <%= f.submit "Send", class: "btn-cmt" %>
+<% end %>
